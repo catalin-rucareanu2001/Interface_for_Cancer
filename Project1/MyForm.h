@@ -431,9 +431,9 @@ namespace Project1 {
 			this->ResumeLayout(false);
 			PlaySound(L"res/snd2.wav", NULL, SND_LOOP | SND_ASYNC);
 		}
-		String^ nume = L"bmb";
+		String^ nume = L"BOMBOANA 12 07 2007 1";
 		String^ ext = L".jpg";
-		String^ path = L"../../ap/ap/res/";
+		String^ path = L"res/mamo/mamo/";
 #pragma endregion
 	private: System::Void exitBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		textBox2->Clear();
