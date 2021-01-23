@@ -94,7 +94,6 @@ namespace Project1 {
 			this->Loading->Size = System::Drawing::Size(182, 53);
 			this->Loading->TabIndex = 1;
 			this->Loading->Text = L"Loading...";
-
 			// 
 			// label2
 			// 
@@ -164,7 +163,5 @@ namespace Project1 {
 
 		}
 	}
-	
-	
 };
 }

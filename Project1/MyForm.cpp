@@ -8,7 +8,7 @@ using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThreadAttribute]
-void main()
+int main()
 {
 	 PlaySound(L"res/snd2.wav", NULL, SND_LOOP | SND_ASYNC);
 	Application::EnableVisualStyles();
@@ -20,12 +20,14 @@ void main()
 	Project1::StartForm form0;
 	Application::Run(% form0);
 
-	/*if (Backend::Functionalitate() == -1)
+	if (Backend::Functionalitate() == -1)
 	{
 		exit(404);
-	}*/
+	}
 
 	Project1::MyForm form1;
 	Application::Run(% form1);
+
 	Backend::StergereTotala();
+	return 0;
 }

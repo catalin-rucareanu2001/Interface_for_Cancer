@@ -111,8 +111,8 @@ namespace Project1 {
 			// 
 			// panel1
 			// 
-			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(18)));
+			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->panel1->Controls->Add(this->exitBtn);
 			this->panel1->Controls->Add(this->txtBtn);
 			this->panel1->Controls->Add(this->threshBtn);
@@ -122,35 +122,39 @@ namespace Project1 {
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(229, 592);
+			this->panel1->Size = System::Drawing::Size(229, 600);
 			this->panel1->TabIndex = 0;
 			// 
 			// exitBtn
 			// 
+			this->exitBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->exitBtn->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->exitBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->exitBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->exitBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->exitBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->exitBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"exitBtn.Image")));
 			this->exitBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->exitBtn->Location = System::Drawing::Point(0, 534);
+			this->exitBtn->Location = System::Drawing::Point(0, 542);
 			this->exitBtn->Name = L"exitBtn";
 			this->exitBtn->Size = System::Drawing::Size(229, 58);
 			this->exitBtn->TabIndex = 1;
 			this->exitBtn->Text = L"Exit";
-			this->exitBtn->UseVisualStyleBackColor = true;
+			this->exitBtn->UseVisualStyleBackColor = false;
 			this->exitBtn->Click += gcnew System::EventHandler(this, &MyForm::exitBtn_Click);
 			// 
 			// txtBtn
 			// 
+			this->txtBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->txtBtn->Dock = System::Windows::Forms::DockStyle::Top;
 			this->txtBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->txtBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->txtBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->txtBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"txtBtn.Image")));
 			this->txtBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->txtBtn->Location = System::Drawing::Point(0, 309);
@@ -158,17 +162,19 @@ namespace Project1 {
 			this->txtBtn->Size = System::Drawing::Size(229, 58);
 			this->txtBtn->TabIndex = 1;
 			this->txtBtn->Text = L"Text";
-			this->txtBtn->UseVisualStyleBackColor = true;
+			this->txtBtn->UseVisualStyleBackColor = false;
 			this->txtBtn->Click += gcnew System::EventHandler(this, &MyForm::txtBtn_Click);
 			// 
 			// threshBtn
 			// 
+			this->threshBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->threshBtn->Dock = System::Windows::Forms::DockStyle::Top;
 			this->threshBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->threshBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->threshBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->threshBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->threshBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"threshBtn.Image")));
 			this->threshBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->threshBtn->Location = System::Drawing::Point(0, 251);
@@ -176,17 +182,19 @@ namespace Project1 {
 			this->threshBtn->Size = System::Drawing::Size(229, 58);
 			this->threshBtn->TabIndex = 1;
 			this->threshBtn->Text = L"Threshold";
-			this->threshBtn->UseVisualStyleBackColor = true;
+			this->threshBtn->UseVisualStyleBackColor = false;
 			this->threshBtn->Click += gcnew System::EventHandler(this, &MyForm::threshBtn_Click);
 			// 
 			// gryBtn
 			// 
+			this->gryBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->gryBtn->Dock = System::Windows::Forms::DockStyle::Top;
 			this->gryBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->gryBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gryBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->gryBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->gryBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"gryBtn.Image")));
 			this->gryBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->gryBtn->Location = System::Drawing::Point(0, 193);
@@ -194,18 +202,20 @@ namespace Project1 {
 			this->gryBtn->Size = System::Drawing::Size(229, 58);
 			this->gryBtn->TabIndex = 1;
 			this->gryBtn->Text = L"Grayscale";
-			this->gryBtn->UseVisualStyleBackColor = true;
+			this->gryBtn->UseVisualStyleBackColor = false;
 			this->gryBtn->Click += gcnew System::EventHandler(this, &MyForm::gryBtn_Click);
 			// 
 			// nrmBtn
 			// 
+			this->nrmBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->nrmBtn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->nrmBtn->Dock = System::Windows::Forms::DockStyle::Top;
 			this->nrmBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->nrmBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->nrmBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->nrmBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->nrmBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"nrmBtn.Image")));
 			this->nrmBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->nrmBtn->Location = System::Drawing::Point(0, 135);
@@ -213,7 +223,7 @@ namespace Project1 {
 			this->nrmBtn->Size = System::Drawing::Size(229, 58);
 			this->nrmBtn->TabIndex = 1;
 			this->nrmBtn->Text = L"Normal";
-			this->nrmBtn->UseVisualStyleBackColor = true;
+			this->nrmBtn->UseVisualStyleBackColor = false;
 			this->nrmBtn->Click += gcnew System::EventHandler(this, &MyForm::nrmBtn_Click);
 			// 
 			// panel2
@@ -227,6 +237,8 @@ namespace Project1 {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(28)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 0);
@@ -242,22 +254,22 @@ namespace Project1 {
 			this->panel3->Controls->Add(this->startBtn);
 			this->panel3->Controls->Add(this->rtBtn);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel3->Location = System::Drawing::Point(229, 518);
+			this->panel3->Location = System::Drawing::Point(229, 526);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(907, 74);
+			this->panel3->Size = System::Drawing::Size(871, 74);
 			this->panel3->TabIndex = 1;
 			// 
 			// lfBtn
 			// 
-			this->lfBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(107)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->lfBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(10)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->lfBtn->Dock = System::Windows::Forms::DockStyle::Right;
 			this->lfBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->lfBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lfBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
-			this->lfBtn->Location = System::Drawing::Point(832, 0);
+			this->lfBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
+			this->lfBtn->Location = System::Drawing::Point(796, 0);
 			this->lfBtn->Name = L"lfBtn";
 			this->lfBtn->Size = System::Drawing::Size(75, 74);
 			this->lfBtn->TabIndex = 0;
@@ -267,17 +279,17 @@ namespace Project1 {
 			// 
 			// startBtn
 			// 
-			this->startBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(107)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->startBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(10)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->startBtn->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->startBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->startBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->startBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->startBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->startBtn->Location = System::Drawing::Point(75, 0);
 			this->startBtn->Name = L"startBtn";
-			this->startBtn->Size = System::Drawing::Size(832, 74);
+			this->startBtn->Size = System::Drawing::Size(796, 74);
 			this->startBtn->TabIndex = 0;
 			this->startBtn->Text = L"Start";
 			this->startBtn->UseVisualStyleBackColor = false;
@@ -285,14 +297,14 @@ namespace Project1 {
 			// 
 			// rtBtn
 			// 
-			this->rtBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(107)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->rtBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(10)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->rtBtn->Dock = System::Windows::Forms::DockStyle::Left;
 			this->rtBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->rtBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->rtBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->rtBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->rtBtn->Location = System::Drawing::Point(0, 0);
 			this->rtBtn->Name = L"rtBtn";
 			this->rtBtn->Size = System::Drawing::Size(75, 74);
@@ -305,63 +317,65 @@ namespace Project1 {
 			// 
 			this->panel4->Controls->Add(this->textBox1);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel4->Location = System::Drawing::Point(229, 468);
+			this->panel4->Location = System::Drawing::Point(229, 476);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(907, 50);
+			this->panel4->Size = System::Drawing::Size(871, 50);
 			this->panel4->TabIndex = 2;
 			// 
 			// textBox1
 			// 
-			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(107)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(10)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->textBox1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Bell MT", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->textBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->textBox1->Location = System::Drawing::Point(0, 0);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(907, 50);
+			this->textBox1->Size = System::Drawing::Size(871, 50);
 			this->textBox1->TabIndex = 2;
 			this->textBox1->Text = L"BOMBOANA 12 07 2007 1";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// pictureBox2
 			// 
-			this->pictureBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(107)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->pictureBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(10)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->pictureBox2->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pictureBox2->Location = System::Drawing::Point(0, 0);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(907, 468);
+			this->pictureBox2->Size = System::Drawing::Size(871, 476);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox2->TabIndex = 0;
 			this->pictureBox2->TabStop = false;
 			// 
 			// panel5
 			// 
+			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(10)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->panel5->Controls->Add(this->textBox2);
 			this->panel5->Controls->Add(this->pictureBox2);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel5->Location = System::Drawing::Point(229, 0);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(907, 468);
+			this->panel5->Size = System::Drawing::Size(871, 476);
 			this->panel5->TabIndex = 3;
 			// 
 			// textBox2
 			// 
-			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(107)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(10)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->textBox2->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Bell MT", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->textBox2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(219)));
 			this->textBox2->Location = System::Drawing::Point(0, 0);
 			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(907, 468);
+			this->textBox2->Size = System::Drawing::Size(871, 476);
 			this->textBox2->TabIndex = 1;
 			this->textBox2->Visible = false;
 			// 
@@ -369,15 +383,16 @@ namespace Project1 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(140)), static_cast<System::Int32>(static_cast<System::Byte>(71)),
-				static_cast<System::Int32>(static_cast<System::Byte>(11)));
-			this->ClientSize = System::Drawing::Size(1136, 592);
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(10)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
+			this->ClientSize = System::Drawing::Size(1100, 600);
 			this->Controls->Add(this->panel5);
 			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MyForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
@@ -422,7 +437,7 @@ private: System::Void grphBtn_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void txtBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	textBox2->Visible = true;
-	textBox2->AppendText(nume + ext + " deschis");
+	textBox2->AppendText("There has been created a file named raspunsuri.txt");
 }
 private: System::Void startBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	textBox2->Clear();

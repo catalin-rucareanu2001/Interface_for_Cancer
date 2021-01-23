@@ -135,20 +135,20 @@ namespace Backend
             namedWindow("Display window", WINDOW_NORMAL);
             imshow("Display window", image);
 
-            namedWindow("Gray Image", WINDOW_NORMAL);
-            imshow("Gray Image", grayImage);
+           // namedWindow("Gray Image", WINDOW_NORMAL);
+           // imshow("Gray Image", grayImage);
 
-            namedWindow("Blured Gray Image", WINDOW_NORMAL);
-            imshow("Blured Gray Image", bluredGrayImage);
+            //namedWindow("Blured Gray Image", WINDOW_NORMAL);
+           // imshow("Blured Gray Image", bluredGrayImage);
 
-            namedWindow("Blured Image", WINDOW_NORMAL);
-            imshow("Blured Image", bluredImage);
+           // namedWindow("Blured Image", WINDOW_NORMAL);
+           // imshow("Blured Image", bluredImage);
 
-            namedWindow("Sobel Image", WINDOW_NORMAL);
-            imshow("Sobel Image", grad);
+           // namedWindow("Sobel Image", WINDOW_NORMAL);
+           // imshow("Sobel Image", grad);
 
-            namedWindow("Tresh Image", WINDOW_NORMAL);
-            imshow("Tresh Image", dst);
+           // namedWindow("Tresh Image", WINDOW_NORMAL);
+            //imshow("Tresh Image", dst);
 
             namedWindow("Graph Image", WINDOW_NORMAL);
             imshow("Graph Image", graphic);
@@ -456,9 +456,7 @@ namespace Backend
             ariaPozCm = im.getAreaPozCm();
             alfa = im.getAlfa();
 
-            //im.Write();
-                // Display();
-                // Write(name);
+          
 
            // cout << "\nAria in pixeli este: " << ariaPx;
             // cout << "\nAria pozei in pixeli este: " << ariaPoz / 10;
@@ -519,9 +517,12 @@ namespace Backend
                 return -1;
             }
 
-            ////////////////////////im.Write();
-
-            im.Display();/////////////////////////////////////////this
+            im.Write();
+            if (i<4 && i>0)
+            {
+                im.Display();/////////////////////////////////////////this
+            }
+            
             cancer.~Stage();
             cout << endl;
             im.~Imagine();
