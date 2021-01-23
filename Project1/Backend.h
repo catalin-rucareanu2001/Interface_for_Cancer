@@ -24,14 +24,6 @@ namespace Backend
     /// <summary>
 /// folosirea claselor de obiecte
 /// </summary>
-    class Help
-    {
-    public:
-        void txt()
-        {
-            cout << "\nlorem ipsum\n";
-        }
-    };
 
     class Stage
     {
@@ -333,8 +325,6 @@ namespace Backend
         {
             image = imwrite("res/proc/" + name + "_Gray_blur.jpg", bluredGrayImage);
 
-            image = imwrite("res/proc/" + name + "_Sobel.jpg", grad);
-
             image = imwrite("res/proc/" + name + "_Thresh.jpg", dst);
         }
 
@@ -416,7 +406,8 @@ namespace Backend
 
     int Functionalitate()
     {
-
+        ofstream myfile;
+        myfile.open("res/rezultate.txt");
 
         vector<string> name;
         vector<double> dim;
@@ -452,7 +443,7 @@ namespace Backend
         {
 
             Imagine im(name.at(i));
-            Help ajutor;
+           // Help ajutor;
 
             if (im.Processing() == -1)
             {
@@ -484,22 +475,24 @@ namespace Backend
             else
             {
 
-                cout << endl << fw << " evolueaza in urmatorul fel:\n";
+                myfile << fw << " evolueaza in urmatorul fel:\n";
                 for (int j = 0; j < dim.size(); j++)
                 {
-                    cout << dim.at(j) << " cm - ";
+                    myfile << dim.at(j) << " cm - ";
                 }
+                myfile << endl << endl;
                 dim.clear();
                 fw = name.at(i).substr(0, name.at(i).find(" "));
                 i--;
             }
             if (i == name.size() - 1)
             {
-                cout << endl << fw << " evolueaza in urmatorul fel:\n";
+                myfile << endl << fw << " evolueaza in urmatorul fel:\n";
                 for (int j = 0; j < dim.size(); j++)
                 {
-                    cout << dim.at(j) << " cm - ";
+                    myfile << dim.at(j) << " cm - ";
                 }
+                myfile << endl << endl;
                 dim.clear();
             }
 
@@ -526,10 +519,9 @@ namespace Backend
                 return -1;
             }
 
-            im.Write();
+            ////////////////////////im.Write();
 
-            //////im.Display();
-            //ajutor.txt();
+            im.Display();/////////////////////////////////////////this
             cancer.~Stage();
             cout << endl;
             im.~Imagine();
