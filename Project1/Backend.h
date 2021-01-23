@@ -331,11 +331,11 @@ namespace Backend
 
         void Write()
         {
-            image = imwrite("res/" + name + "_Gray_blur.jpg", bluredGrayImage);
+            image = imwrite("res/proc/" + name + "_Gray_blur.jpg", bluredGrayImage);
 
-            image = imwrite("res/" + name + "_Sobel.jpg", grad);
+            image = imwrite("res/proc/" + name + "_Sobel.jpg", grad);
 
-            image = imwrite("res/" + name + "_Tresh.jpg", dst);
+            image = imwrite("res/proc/" + name + "_Thresh.jpg", dst);
         }
 
     private:
@@ -446,6 +446,8 @@ namespace Backend
         cout << "\nSe proceseaza " << name.size() << " imagini\n";
         fw = name.at(0).substr(0, name.at(0).find(" "));
         cout << fw << "=firstword\n";
+
+
         for (int i = 0; i < name.size(); i++)
         {
 
@@ -524,7 +526,9 @@ namespace Backend
                 return -1;
             }
 
-            /////////im.Display();
+            im.Write();
+
+            //////im.Display();
             //ajutor.txt();
             cancer.~Stage();
             cout << endl;
@@ -546,5 +550,59 @@ namespace Backend
         position = NULL;
 
     }
+    void StergereTotala()
+    {
+        string numele = "res/proc/", GBlur = "_Gray_blur", Thr = "_Thresh", nm1, nm2;
+        vector<string> name;
+        string n, fisier = "res/sani.txt";
+        ifstream m1(fisier);
+        try
+        {
+            if (m1.is_open())
+            {
+                while (getline(m1, n))
+                {
+                    name.push_back(n);
+                }
+            }
+            else
+            {
+                throw fisier;
+            }
+        }
+        catch (const string fisier)
+        {
+            cout << "Nu exista fisierul cu denumirea " << fisier << endl;
+            exit(404);
+        }
+        for (int i = 0; i < name.size(); i++)
+        {
+            nm1 = numele + name.at(i) + Thr + ".jpg";
+            nm2 = numele + name.at(i) + GBlur + ".jpg";
+            char* cstr1 = new char[nm1.length() + 1];
+            char* cstr2 = new char[nm2.length() + 1];
+            strcpy(cstr1, nm1.c_str());
+            strcpy(cstr2, nm2.c_str());
+            try
+            {
+                if (remove(cstr1) != 0)
+                {
 
+                }
+                if (remove(cstr2) != 0)
+                {
+
+                }
+            }
+            catch (const int)
+            {
+                cout << "Unul din fisiere nu exista\n";
+            }
+            delete[] cstr1;
+            delete[] cstr2;
+        }
+
+
+
+    }
 }

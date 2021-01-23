@@ -43,13 +43,13 @@ namespace Project1 {
 	private: System::Windows::Forms::Panel^ panel3;
 	private: System::Windows::Forms::Panel^ panel4;
 	private: System::Windows::Forms::Button^ exitBtn;
-	private: System::Windows::Forms::Button^ grphBtn;
+
 
 
 
 	private: System::Windows::Forms::Button^ threshBtn;
 
-	private: System::Windows::Forms::Button^ sobBtn;
+
 
 	private: System::Windows::Forms::Button^ gryBtn;
 
@@ -86,9 +86,7 @@ namespace Project1 {
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->exitBtn = (gcnew System::Windows::Forms::Button());
 			this->txtBtn = (gcnew System::Windows::Forms::Button());
-			this->grphBtn = (gcnew System::Windows::Forms::Button());
 			this->threshBtn = (gcnew System::Windows::Forms::Button());
-			this->sobBtn = (gcnew System::Windows::Forms::Button());
 			this->gryBtn = (gcnew System::Windows::Forms::Button());
 			this->nrmBtn = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -117,9 +115,7 @@ namespace Project1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(18)));
 			this->panel1->Controls->Add(this->exitBtn);
 			this->panel1->Controls->Add(this->txtBtn);
-			this->panel1->Controls->Add(this->grphBtn);
 			this->panel1->Controls->Add(this->threshBtn);
-			this->panel1->Controls->Add(this->sobBtn);
 			this->panel1->Controls->Add(this->gryBtn);
 			this->panel1->Controls->Add(this->nrmBtn);
 			this->panel1->Controls->Add(this->panel2);
@@ -157,31 +153,13 @@ namespace Project1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->txtBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"txtBtn.Image")));
 			this->txtBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->txtBtn->Location = System::Drawing::Point(0, 425);
+			this->txtBtn->Location = System::Drawing::Point(0, 309);
 			this->txtBtn->Name = L"txtBtn";
 			this->txtBtn->Size = System::Drawing::Size(229, 58);
 			this->txtBtn->TabIndex = 1;
 			this->txtBtn->Text = L"Text";
 			this->txtBtn->UseVisualStyleBackColor = true;
 			this->txtBtn->Click += gcnew System::EventHandler(this, &MyForm::txtBtn_Click);
-			// 
-			// grphBtn
-			// 
-			this->grphBtn->Dock = System::Windows::Forms::DockStyle::Top;
-			this->grphBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->grphBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->grphBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
-			this->grphBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"grphBtn.Image")));
-			this->grphBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->grphBtn->Location = System::Drawing::Point(0, 367);
-			this->grphBtn->Name = L"grphBtn";
-			this->grphBtn->Size = System::Drawing::Size(229, 58);
-			this->grphBtn->TabIndex = 1;
-			this->grphBtn->Text = L"Graph";
-			this->grphBtn->UseVisualStyleBackColor = true;
-			this->grphBtn->Click += gcnew System::EventHandler(this, &MyForm::grphBtn_Click);
 			// 
 			// threshBtn
 			// 
@@ -193,31 +171,13 @@ namespace Project1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->threshBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"threshBtn.Image")));
 			this->threshBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->threshBtn->Location = System::Drawing::Point(0, 309);
+			this->threshBtn->Location = System::Drawing::Point(0, 251);
 			this->threshBtn->Name = L"threshBtn";
 			this->threshBtn->Size = System::Drawing::Size(229, 58);
 			this->threshBtn->TabIndex = 1;
 			this->threshBtn->Text = L"Threshold";
 			this->threshBtn->UseVisualStyleBackColor = true;
 			this->threshBtn->Click += gcnew System::EventHandler(this, &MyForm::threshBtn_Click);
-			// 
-			// sobBtn
-			// 
-			this->sobBtn->Dock = System::Windows::Forms::DockStyle::Top;
-			this->sobBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->sobBtn->Font = (gcnew System::Drawing::Font(L"Brush Script MT", 24, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->sobBtn->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(155)));
-			this->sobBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"sobBtn.Image")));
-			this->sobBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->sobBtn->Location = System::Drawing::Point(0, 251);
-			this->sobBtn->Name = L"sobBtn";
-			this->sobBtn->Size = System::Drawing::Size(229, 58);
-			this->sobBtn->TabIndex = 1;
-			this->sobBtn->Text = L"Sobel";
-			this->sobBtn->UseVisualStyleBackColor = true;
-			this->sobBtn->Click += gcnew System::EventHandler(this, &MyForm::sobBtn_Click);
 			// 
 			// gryBtn
 			// 
@@ -364,7 +324,7 @@ namespace Project1 {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(907, 50);
 			this->textBox1->TabIndex = 2;
-			this->textBox1->Text = L"bmb";
+			this->textBox1->Text = L"BOMBOANA 12 07 2007 1";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// pictureBox2
@@ -429,9 +389,9 @@ namespace Project1 {
 			this->panel5->ResumeLayout(false);
 			this->panel5->PerformLayout();
 			this->ResumeLayout(false);
-			PlaySound(L"res/snd2.wav", NULL, SND_LOOP | SND_ASYNC);
+
 		}
-		String^ nume = L"BOMBOANA 12 07 2007 1";
+		String^ nume = L"BOMBOANA 12 07 2007";
 		String^ ext = L".jpg";
 		String^ path = L"res/mamo/mamo/";
 #pragma endregion
