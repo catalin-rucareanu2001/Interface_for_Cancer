@@ -165,6 +165,7 @@ namespace Project1 {
 			this->txtBtn->TabIndex = 1;
 			this->txtBtn->Text = L"Text";
 			this->txtBtn->UseVisualStyleBackColor = false;
+			this->txtBtn->Visible = false;
 			this->txtBtn->Click += gcnew System::EventHandler(this, &MyForm::txtBtn_Click);
 			// 
 			// threshBtn
@@ -185,6 +186,7 @@ namespace Project1 {
 			this->threshBtn->TabIndex = 1;
 			this->threshBtn->Text = L"Threshold";
 			this->threshBtn->UseVisualStyleBackColor = false;
+			this->threshBtn->Visible = false;
 			this->threshBtn->Click += gcnew System::EventHandler(this, &MyForm::threshBtn_Click);
 			// 
 			// gryBtn
@@ -205,6 +207,7 @@ namespace Project1 {
 			this->gryBtn->TabIndex = 1;
 			this->gryBtn->Text = L"Grayscale";
 			this->gryBtn->UseVisualStyleBackColor = false;
+			this->gryBtn->Visible = false;
 			this->gryBtn->Click += gcnew System::EventHandler(this, &MyForm::gryBtn_Click);
 			// 
 			// nrmBtn
@@ -226,6 +229,7 @@ namespace Project1 {
 			this->nrmBtn->TabIndex = 1;
 			this->nrmBtn->Text = L"Normal";
 			this->nrmBtn->UseVisualStyleBackColor = false;
+			this->nrmBtn->Visible = false;
 			this->nrmBtn->Click += gcnew System::EventHandler(this, &MyForm::nrmBtn_Click);
 			// 
 			// panel2
@@ -490,6 +494,10 @@ private: System::Void startBtn_Click(System::Object^ sender, System::EventArgs^ 
 	startBtn->Visible = false;
 	lfBtn->Visible = true; 
 	rtBtn->Visible = true;
+	nrmBtn->Visible = true;
+	gryBtn->Visible = true;
+	threshBtn->Visible = true;
+	txtBtn->Visible = true;
 	rtBtn->Width = 330;
 	lfBtn->Width = 330;
 	doSth(none);
