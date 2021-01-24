@@ -500,7 +500,7 @@ namespace Backend
 
             cancer.SetArea(ariaCm);
             stare = cancer.getStage();
-            cout << endl << stare;
+            myfile << stare<<endl;
 
             position = cancer.getPos();
             //cout << endl << position;
