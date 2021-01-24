@@ -407,7 +407,7 @@ namespace Backend
     int Functionalitate()
     {
         ofstream myfile;
-        myfile.open("res/rezultate.txt");
+        myfile.open("res/answers.txt");
 
         vector<string> name;
         vector<double> dim;

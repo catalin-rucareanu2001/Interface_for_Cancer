@@ -11,6 +11,8 @@ namespace Project1 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	using namespace System::IO;
+
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
@@ -275,6 +277,7 @@ namespace Project1 {
 			this->lfBtn->TabIndex = 0;
 			this->lfBtn->Text = L">";
 			this->lfBtn->UseVisualStyleBackColor = false;
+			this->lfBtn->Visible = false;
 			this->lfBtn->Click += gcnew System::EventHandler(this, &MyForm::lfBtn_Click);
 			// 
 			// startBtn
@@ -311,6 +314,7 @@ namespace Project1 {
 			this->rtBtn->TabIndex = 0;
 			this->rtBtn->Text = L"<";
 			this->rtBtn->UseVisualStyleBackColor = false;
+			this->rtBtn->Visible = false;
 			this->rtBtn->Click += gcnew System::EventHandler(this, &MyForm::rtBtn_Click);
 			// 
 			// panel4
@@ -406,52 +410,127 @@ namespace Project1 {
 			this->ResumeLayout(false);
 
 		}
-		String^ nume = L"BOMBOANA 12 07 2007";
+		
+		
+#pragma endregion
+		
 		String^ ext = L".jpg";
 		String^ path = L"res/mamo/mamo/";
-#pragma endregion
+		String^ path2 = L"res/proc/";
+
+		String^ file = L"res/sani.txt";
+
+		String^ Thresh = L"_Thresh";
+		String^ Gray = L"_Gray_blur";
+		String^ none = L"";
+
+		int pos = 0,casasin=0;
+
+		array< String^ >^ vals = gcnew array< String^ >(98);
+
+		array<String^>^ Test0() {
+			int i;
+			array< String^ >^ local = gcnew array< String^ >(98);
+			StreamReader^ din = File::OpenText(file);
+			String^ str;
+			int count = 0;
+			while ((str = din->ReadLine()) != nullptr)
+			{
+				local[count] = str;
+				count++;
+				Console::WriteLine("line {0}: {1}", count, str);
+			}
+			return local;
+		}
+
 	private: System::Void exitBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		textBox2->Clear();
 		this->Close();
 	}
+		   void doSth(String^ anything)
+		   {
+			   textBox2->Clear();
+			   textBox1->Clear();
+			   textBox1->AppendText(vals[pos]);
+			   if (casasin==0)
+			   {
+				   pictureBox2->Image = System::Drawing::Image::FromFile(path + vals[pos] + anything + ext);
+			   }
+			   else
+			   {
+				   pictureBox2->Image = System::Drawing::Image::FromFile(path2 + vals[pos] + anything + ext);
+			   }
+			   
+		   }
+	
 private: System::Void nrmBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-	pictureBox2->Image = System::Drawing::Image::FromFile(path + nume + ext);
+	pictureBox2->Image = System::Drawing::Image::FromFile(path + vals[pos] + ext);
 	textBox2->Visible = false;
 	textBox2->Clear();
+	casasin = 0;
 }
 private: System::Void gryBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	textBox2->Visible = false;
 	textBox2->Clear();
-}
-private: System::Void sobBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-	textBox2->Visible = false;
-	textBox2->Clear();
+	casasin = 2;
+	doSth(Gray);
 }
 private: System::Void threshBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	textBox2->Visible = false;
 	textBox2->Clear();
-}
-private: System::Void grphBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-	textBox2->Visible = false;
-	textBox2->Clear();
+	casasin = 1;
+	doSth(Thresh);
 }
 private: System::Void txtBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	textBox2->Visible = true;
-	textBox2->AppendText("There has been created a file named raspunsuri.txt");
+	textBox2->AppendText("There has been created a file named answers.txt");
 }
 private: System::Void startBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-	textBox2->Clear();
-	nume = textBox1->Text;
-	textBox1->Clear();
-	textBox1->AppendText(nume);
-	textBox2->Visible = true;
-	textBox2->AppendText(nume + ext + " deschis");
+	vals = Test0();
+	startBtn->Visible = false;
+	lfBtn->Visible = true; 
+	rtBtn->Visible = true;
+	rtBtn->Width = 330;
+	lfBtn->Width = 330;
+	doSth(none);
 }
 private: System::Void rtBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	pos--;
+	if (pos<0)
+	{
+		pos = 97;
+	}
+	switch (casasin)
+	{
+	case 1:
+		doSth(Thresh);
+		break;
+	case 2:
+		doSth(Gray);
+		break;
+	default:
+		doSth(none);
+		break;
+	}
 }
 private: System::Void lfBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	pos++;
+	if (pos >97)
+	{
+		pos = 0;
+	}
+	switch (casasin)
+	{
+	case 1:
+		doSth(Thresh);
+		break;
+	case 2:
+		doSth(Gray);
+		break;
+	default:
+		doSth(none);
+		break;
+	}
 }
 };
 }

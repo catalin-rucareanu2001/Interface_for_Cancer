@@ -16,15 +16,15 @@ int main()
 	
 	Project1::loadingScreen form;
 	Application::Run(% form);
-	
-	Project1::StartForm form0;
-	Application::Run(% form0);
 
 	if (Backend::Functionalitate() == -1)
 	{
 		exit(404);
 	}
-
+	
+	Project1::StartForm form0;
+	Application::Run(% form0);
+	
 	Project1::MyForm form1;
 	Application::Run(% form1);
 
